@@ -97,7 +97,7 @@ const TransactionModal = ({
                     alt="product image"
                   />
                 </div>
-                <div className="font-medium text-sm">{item.productId.name}</div>
+                <div className="font-medium text-sm">{item.productId?.name}</div>
                 <div className="font-medium ml-auto text-sm">
                   {item.qty} units
                 </div>

@@ -30,11 +30,11 @@ const CategoriesSection = ({categories}: TCategoriesProps) => {
                 src={getImageUrl(category.imageUrl)}
                 width={86}
                 height="86"
-                alt={category.name}
+                alt={category?.name}
                 className="mb-[10px]"
               />
               <div className="text-primary font-medium text-xl text-center">
-                {category.name}
+                {category?.name}
               </div>
             </div>
           </div>

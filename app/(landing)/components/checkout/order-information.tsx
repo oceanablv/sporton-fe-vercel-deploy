@@ -11,7 +11,7 @@ type TOrderInformation = {
 const OrderInformation = ({formData, setFormData}: TOrderInformation) => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({...formData, [e.target.name]: e.target.value})
+    setFormData({...formData, [e.target?.name]: e.target.value})
   }
 
   return (

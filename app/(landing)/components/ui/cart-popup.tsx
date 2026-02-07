@@ -31,12 +31,12 @@ const CartPopup = () => {
               src={getImageUrl(item.imageUrl)}
               width={63}
               height={63}
-              alt={item.name}
+              alt={item?.name}
               className="aspect-square object-contain"
             />
           </div>
           <div className="self-center">
-            <div className="text-sm font-medium">{item.name}</div>
+            <div className="text-sm font-medium">{item?.name}</div>
             <div className="flex gap-3 font-medium text-xs">
               <div>{item.qty}x</div>
               <div className="text-primary">{priceFormatter(item.price)}</div>

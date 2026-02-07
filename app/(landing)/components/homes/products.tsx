@@ -37,7 +37,7 @@ const ProductsSection = ({products}: TProductsProps) => {
             <div className="bg-primary-light aspect-square w-full flex justify-center items-center relative">
               <Image
                 src={getImageUrl(product.imageUrl)}
-                alt={product.name}
+                alt={product?.name}
                 width={300}
                 height={300}
                 className="aspect-square object-contain"
@@ -46,7 +46,7 @@ const ProductsSection = ({products}: TProductsProps) => {
                 <FiPlus size={24} />
               </Button>
             </div>
-            <h3 className="font-medium text-lg mb-1.5 mt-4">{product.name}</h3>
+            <h3 className="font-medium text-lg mb-1.5 mt-4">{product?.name}</h3>
             <div className="flex justify-between mb-8">
               <div className="text-gray-500">{product.category?.name}</div>
               <div className="font-medium text-primary">

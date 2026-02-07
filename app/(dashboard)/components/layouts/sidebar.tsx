@@ -66,7 +66,7 @@ const Sidebar = () => {
               }`}
             >
               <item.icon size={24} />
-              <span>{item.name}</span>
+              <span>{item?.name}</span>
             </Link>
           );
         })}

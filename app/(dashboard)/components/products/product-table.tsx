@@ -36,16 +36,16 @@ const ProductTable = ({ products, onDelete, onEdit }: TProductTableProps) => {
                       src={getImageUrl(data.imageUrl)}
                       width={52}
                       height={52}
-                      alt={data.name}
+                      alt={data?.name}
                       className="aspect-square object-contain"
                     />
                   </div>
-                  <span>{data.name}</span>
+                  <span>{data?.name}</span>
                 </div>
               </td>
               <td className="px-6 py-4 font-medium">
                 <div className="rounded-md bg-gray-200 px-2 py-1 w-fit">
-                  {data.category.name}
+                  {data.category?.name}
                 </div>
               </td>
               <td className="px-6 py-4 font-medium">

@@ -49,7 +49,7 @@ const FileUpload = ({ onFileSelect }: TFileUploadProps) => {
       ) : (
         <div className="text-center">
           <FiImage className="text-primary mx-auto mb-4" size={28} />
-          <p className="text-sm text-primary">{file.name}</p>
+          <p className="text-sm text-primary">{file?.name}</p>
           <p className="text-sm text-gray-400">
             {(file.size / 1024).toFixed(1)} KB
           </p>

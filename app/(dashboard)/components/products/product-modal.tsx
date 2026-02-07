@@ -67,7 +67,7 @@ const ProductModal = ({
     setIsSubmitting(true);
     try {
       const data = new FormData();
-      data.append("name", formData.name);
+      data.append("name", formData?.name);
       data.append("price", formData.price.toString());
       data.append("stock", formData.stock.toString());
       data.append("categoryId", formData.categoryId);
@@ -115,9 +115,9 @@ const ProductModal = ({
   };
 
   useEffect(() => {
-    if (isEditMode && isOpen) {
+      if (isEditMode && isOpen) {
       setFormData({
-        name: product.name,
+        name: product?.name,
         description: product.description,
         price: product.price,
         categoryId: product.category._id,
@@ -166,7 +166,7 @@ const ProductModal = ({
                 type="text"
                 id="name"
                 name="name"
-                value={formData.name}
+                value={formData?.name}
                 onChange={handleChange}
                 placeholder="e. g. Running Shoes"
               />
@@ -208,7 +208,7 @@ const ProductModal = ({
                 </option>
                 {categories.map((category) => (
                   <option value={category._id} key={category._id}>
-                    {category.name}
+                    {category?.name}
                   </option>
                 ))}
               </select>

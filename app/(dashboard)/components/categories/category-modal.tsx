@@ -42,7 +42,7 @@ const CategoryModal = ({
   useEffect(() => {
     if (isEditMode && isOpen) {
       setFormData({
-        name: category.name,
+        name: category?.name,
         description: category.description,
       });
       setImagePreview(
@@ -71,7 +71,7 @@ const CategoryModal = ({
     setIsSubmitting(true);
     try {
       const data = new FormData();
-      data.append("name", formData.name);
+      data.append("name", formData?.name);
       data.append("description", formData.description);
       if (imageFile) {
         data.append("image", imageFile);
@@ -135,7 +135,7 @@ const CategoryModal = ({
                 type="text"
                 id="name"
                 name="name"
-                value={formData.name}
+                value={formData?.name}
                 onChange={handleChange}
                 placeholder="e. g. Running"
               />
